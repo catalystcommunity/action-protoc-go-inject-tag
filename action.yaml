@@ -33,7 +33,7 @@ runs:
     - name: Install go install github.com/favadi/protoc-go-inject-tag
       shell: bash
       run: |
-        go install github.com/favadi/protoc-go-inject-tag@${{ inputs.go-version }}
+        go install github.com/favadi/protoc-go-inject-tag@${{ inputs.protoc-go-inject-tag-version }}
     - name: Run protoc-go-inject-tag
       shell: bash
       run: |
