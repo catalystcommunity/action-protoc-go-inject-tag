@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/catalystsquad/action-protoc-go-inject-tag/compare/v1.0.0...v1.0.1) (2022-08-13)
+
+
+### Bug Fixes
+
+* Modified checkout and commit logic and parameters ([#2](https://github.com/catalystsquad/action-protoc-go-inject-tag/issues/2)) ([20dc625](https://github.com/catalystsquad/action-protoc-go-inject-tag/commit/20dc625e59090885c012a599ed759792a40279c0))
+
 # 1.0.0 (2022-07-22)
 
 
