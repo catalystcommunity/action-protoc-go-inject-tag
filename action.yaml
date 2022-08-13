@@ -21,11 +21,31 @@ inputs:
     description: 'If true, will commit the modified files'
     required: false
     default: true
+  commit-message:
+    description: 'commit message to use when pushing generated code'
+    required: false
+    default: 'chore: injected tags into go structs [skip ci]'
+  checkout:
+    description: 'set to true to checkout the repository, set to false if you are checking out the repository before using this action'
+    required: false
+    default: true
+  ref:
+    description: 'Ref to checkout'
+    required: false
+    default: ${{ github.head_ref }}
+  token:
+    description: 'Git token to use'
+    required: false
+    default: ${{ github.token }}
 runs:
   using: "composite"
   steps:
     - name: Checkout
+      if: inputs.checkout == 'true'
       uses: actions/checkout@v2
+      with:
+        token: ${{ inputs.token }}
+        ref: ${{ inputs.ref }}
     - name: Setup Go With Caching
       uses: magnetikonline/action-golang-cache@v1
       with:
@@ -44,3 +64,5 @@ runs:
     - name: Commit
       if: inputs.commit == 'true'
       uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: ${{ inputs.commit-message }}
