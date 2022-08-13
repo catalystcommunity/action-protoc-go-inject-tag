@@ -65,5 +65,4 @@ runs:
       if: inputs.commit == 'true'
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        skip_checkout: true
         commit_message: ${{ inputs.commit-message }}
