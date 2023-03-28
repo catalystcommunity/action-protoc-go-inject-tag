@@ -29,9 +29,6 @@ inputs:
     description: 'set to true to checkout the repository, set to false if you are checking out the repository before using this action'
     required: false
     default: true
-  checkout-path:
-    description: 'path to checkout the repository to'
-    default: inject-tags
   ref:
     description: 'Ref to checkout'
     required: false
@@ -60,11 +57,9 @@ runs:
         go install github.com/favadi/protoc-go-inject-tag@${{ inputs.protoc-go-inject-tag-version }}
     - name: Git status
       shell: bash
-      working-directory: ${{ inputs.checkout-path }}
       run: |
         git status
     - name: Run protoc-go-inject-tag
-      working-directory: ${{ inputs.checkout-path }}
       shell: bash
       run: |
         IFS=',' read -ra ADDR <<< "${{ inputs.files }}"
@@ -72,13 +67,11 @@ runs:
         protoc-go-inject-tag -input="$i"
         done
     - name: Git status
-      working-directory: ${{ inputs.checkout-path }}
       shell: bash
       run: |
         git status
     - name: Commit
       if: inputs.commit == 'true'
-      working-directory: ${{ inputs.checkout-path }}
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: ${{ inputs.commit-message }}
