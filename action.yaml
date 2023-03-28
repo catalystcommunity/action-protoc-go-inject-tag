@@ -12,7 +12,7 @@ inputs:
   protoc-go-inject-tag-version:
     description: 'Version of protoc-go-inject-tag to use'
     required: false
-    default: 'latest'
+    default: 'v1.4.0'
   files:
     description: 'Comma separated list of file paths to run protoc-go-inject-tag on'
     required: false
@@ -24,11 +24,11 @@ inputs:
   commit-message:
     description: 'commit message to use when pushing generated code'
     required: false
-    default: 'chore: injected tags into go structs'
+    default: 'chore: injected tags into go structs [skip ci]'
   checkout:
     description: 'set to true to checkout the repository, set to false if you are checking out the repository before using this action'
     required: false
-    default: true
+    default: false
   ref:
     description: 'Ref to checkout'
     required: false
