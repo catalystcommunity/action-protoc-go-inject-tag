@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/catalystsquad/action-protoc-go-inject-tag/compare/v1.0.2...v1.0.3) (2023-03-29)
+
+
+### Bug Fixes
+
+* Change default version from latest to the most recent released version to pin the version. Added text to the commit message to not trigger new runs when generated code is pushed ([#5](https://github.com/catalystsquad/action-protoc-go-inject-tag/issues/5)) ([6eeaa1d](https://github.com/catalystsquad/action-protoc-go-inject-tag/commit/6eeaa1db48f5db7e43f72f270be613014837b14b))
+
 ## [1.0.2](https://github.com/catalystsquad/action-protoc-go-inject-tag/compare/v1.0.1...v1.0.2) (2022-08-15)
 
 
