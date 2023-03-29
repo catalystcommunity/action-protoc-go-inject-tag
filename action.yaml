@@ -46,7 +46,6 @@ runs:
       with:
         token: ${{ inputs.token }}
         ref: ${{ inputs.ref }}
-        path: ${{ inputs.checkout-path }}
     - name: Setup Go With Caching
       uses: magnetikonline/action-golang-cache@v1
       with:
@@ -55,10 +54,6 @@ runs:
       shell: bash
       run: |
         go install github.com/favadi/protoc-go-inject-tag@${{ inputs.protoc-go-inject-tag-version }}
-    - name: Git status
-      shell: bash
-      run: |
-        git status
     - name: Run protoc-go-inject-tag
       shell: bash
       run: |
@@ -66,10 +61,6 @@ runs:
         for i in "${ADDR[@]}"; do
         protoc-go-inject-tag -input="$i"
         done
-    - name: Git status
-      shell: bash
-      run: |
-        git status
     - name: Commit
       if: inputs.commit == 'true'
       uses: stefanzweifel/git-auto-commit-action@v4
