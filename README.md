@@ -36,7 +36,7 @@ Uses [protoc-go-inject-tag](https://github.com/favadi/protoc-go-inject-tag) to i
     commit: ""
 
     # commit message to use when pushing generated code
-    # Default: chore: injected tags into go structs [skip ci]
+    # Default: chore: injected tags into go structs
     commit-message: ""
 
     # set to true to checkout the repository, set to false if you are checking out the
@@ -56,17 +56,17 @@ Uses [protoc-go-inject-tag](https://github.com/favadi/protoc-go-inject-tag) to i
 <!-- end usage -->
 <!-- start inputs -->
 
-| **Input**                          | **Description**                                                                                                      |                   **Default**                    | **Required** |
-| :--------------------------------- | :------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------: | :----------: |
-| **`go-version`**                   | Version of golang to use                                                                                             |                     `~1.18`                      |  **false**   |
-| **`working-directory`**            | Directory to run the command from                                                                                    |                       `.`                        |  **false**   |
-| **`protoc-go-inject-tag-version`** | Version of protoc-go-inject-tag to use                                                                               |                     `v1.4.0`                     |  **false**   |
-| **`files`**                        | Comma separated list of file paths to run protoc-go-inject-tag on                                                    |                    `*.pb.go`                     |  **false**   |
-| **`commit`**                       | If true, will commit the modified files                                                                              |                      `true`                      |  **false**   |
-| **`commit-message`**               | commit message to use when pushing generated code                                                                    | `chore: injected tags into go structs [skip ci]` |  **false**   |
-| **`checkout`**                     | set to true to checkout the repository, set to false if you are checking out the repository before using this action |                      `true`                      |  **false**   |
-| **`ref`**                          | Ref to checkout                                                                                                      |             `${{ github.head_ref }}`             |  **false**   |
-| **`token`**                        | Git token to use                                                                                                     |              `${{ github.token }}`               |  **false**   |
+| **Input**                          | **Description**                                                                                                      |              **Default**               | **Required** |
+| :--------------------------------- | :------------------------------------------------------------------------------------------------------------------- | :------------------------------------: | :----------: |
+| **`go-version`**                   | Version of golang to use                                                                                             |                `~1.18`                 |  **false**   |
+| **`working-directory`**            | Directory to run the command from                                                                                    |                  `.`                   |  **false**   |
+| **`protoc-go-inject-tag-version`** | Version of protoc-go-inject-tag to use                                                                               |                `v1.4.0`                |  **false**   |
+| **`files`**                        | Comma separated list of file paths to run protoc-go-inject-tag on                                                    |               `*.pb.go`                |  **false**   |
+| **`commit`**                       | If true, will commit the modified files                                                                              |                 `true`                 |  **false**   |
+| **`commit-message`**               | commit message to use when pushing generated code                                                                    | `chore: injected tags into go structs` |  **false**   |
+| **`checkout`**                     | set to true to checkout the repository, set to false if you are checking out the repository before using this action |                 `true`                 |  **false**   |
+| **`ref`**                          | Ref to checkout                                                                                                      |        `${{ github.head_ref }}`        |  **false**   |
+| **`token`**                        | Git token to use                                                                                                     |         `${{ github.token }}`          |  **false**   |
 
 <!-- end inputs -->
 <!-- start outputs -->
