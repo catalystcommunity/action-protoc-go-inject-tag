@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/catalystsquad/action-protoc-go-inject-tag/compare/v1.0.3...v1.0.4) (2023-04-20)
+
+
+### Bug Fixes
+
+* remove skip ci ([#6](https://github.com/catalystsquad/action-protoc-go-inject-tag/issues/6)) ([eda2cc0](https://github.com/catalystsquad/action-protoc-go-inject-tag/commit/eda2cc05210fb85300668aee8f37ab5269ba1f56))
+
 ## [1.0.3](https://github.com/catalystsquad/action-protoc-go-inject-tag/compare/v1.0.2...v1.0.3) (2023-03-29)
 
 
