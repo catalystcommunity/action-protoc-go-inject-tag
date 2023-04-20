@@ -24,7 +24,7 @@ inputs:
   commit-message:
     description: 'commit message to use when pushing generated code'
     required: false
-    default: 'chore: injected tags into go structs [skip ci]'
+    default: 'chore: injected tags into go structs'
   checkout:
     description: 'set to true to checkout the repository, set to false if you are checking out the repository before using this action'
     required: false
