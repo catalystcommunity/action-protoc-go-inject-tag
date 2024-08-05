@@ -13,7 +13,7 @@ Uses [protoc-go-inject-tag](https://github.com/favadi/protoc-go-inject-tag) to i
 <!-- start usage -->
 
 ```yaml
-- uses: catalystsquad/action-protoc-go-inject-tag@undefined
+- uses: catalystcommunity/action-protoc-go-inject-tag@undefined
   with:
     # Version of golang to use
     # Default: ~1.18
